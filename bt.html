@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3"></canvas>
+    <script>
+        function Rectangle(x, y) {
+            this.x = x
+            this.y = y
+            this.dientich = function() {
+                return this.x * this.y
+            }
+            this.chuvi = function() {
+                return (this.x + this.y) * 2
+            }
+
+            this.fillRect = function() {
+                var ctx = document.getElementById("myCanvas").getContext("2d");
+                ctx.fillStyle = "#0ae3a6";
+                ctx.fillRect(20, 20, x, y)
+            }
+        }
+        var a = new Rectangle(parseFloat(prompt("Chieu dai")),
+            parseFloat(prompt("Chieu rong")))
+        alert("Dien tich" + a.dientich())
+        alert("Chu vi" + a.chuvi())
+        a.fillRect()
+    </script>
+</body>
+
+</html>
